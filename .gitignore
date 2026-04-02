@@ -1,0 +1,16 @@
+talos/secrets.yaml
+*.pem
+*.key
+kubeconfig
+talosconfig
+
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+.env
+*.env
+.DS_Store
+controlplane.yaml
+worker.yaml
+nat-vm-cloud-init.yaml

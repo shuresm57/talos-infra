@@ -1,0 +1,13 @@
+env:
+  - name: HCLOUD_NETWORK
+    valueFrom:
+      secretKeyRef:
+        name: hcloud
+        key: network
+  - name: HCLOUD_NETWORK_ROUTES_ENABLED
+    value: "false"
+  - name: HCLOUD_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: hcloud
+        key: token

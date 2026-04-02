@@ -1,0 +1,6 @@
+cluster:
+  proxy:
+    disabled: true
+  externalCloudProvider:
+    enabled: false
+  allowSchedulingOnControlPlanes: false

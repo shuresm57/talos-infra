@@ -1,0 +1,18 @@
+machine: 
+  certSANs:
+    - 95.217.172.197
+  network:
+    interfaces: 
+      - interface: eth0
+        dhcp: true
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 10.0.0.1
+          - network: 10.0.0.1/32
+
+cluster:
+  network:
+    cni:
+      name: none
+  externalCloudProvider:
+    enabled: true
