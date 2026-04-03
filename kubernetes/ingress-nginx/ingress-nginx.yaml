@@ -5,5 +5,3 @@ controller:
       load-balancer.hetzner.cloud/name: "ingress-nginx"
       load-balancer.hetzner.cloud/type: "lb11"
       load-balancer.hetzner.cloud/use-private-ip: "true"
-      # # Redirect from HTTP to HTTPS.
-      # load-balancer.hetzner.cloud/http-redirect-http: "true"
