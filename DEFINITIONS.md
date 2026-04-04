@@ -26,9 +26,15 @@ Creates persistent storage for containers so that if a container gets dropped, t
 
 Automates what I was doing manually with `hcloud load-balancer create` so when an app needs a public load balancer, Hetzner creates one automatically.
 
-**Ingress NGINX** (deprecated) 
+~~**Ingress NGINX** (deprecated)~~ 
 
-The HTTP router which sits in front of all your services and routes incoming requests to the right one based on the hostname.
+~~The HTTP router which sits in front of all your services and routes incoming requests to the right one based on the hostname.~~
+
+**Gateway API**
+
+Changed the HTTP Router to Gateway API to manage ingress traffic. Routes the incoming HTTP requests to the right service based on hostname and path, just like ingress-nginx did, but by using standardized resources instead of a 3rd party controller.
+
+Since we already Cilium as our CNI, it hanldes Gateway API natively with no extra components needed.
 
 **Helm**
 
