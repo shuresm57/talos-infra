@@ -14,6 +14,7 @@ Internet → Load Balancer (public IP)
          ├── nat-vm   — outbound NAT gateway
          ├── cp1      — control plane
          ├── cp2      — control plane
+         ├── cp3      — control plane
          └── worker1  — worker node
 
 ```
