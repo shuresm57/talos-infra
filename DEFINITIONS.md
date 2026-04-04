@@ -2,6 +2,8 @@
 
 This is a living reference document to help myself to better understand the stack behind the technology. Each entry is to be written as simple as possible for my own understanding.
 
+---
+
 **Kubernetes**
 
 A cluster of nodes, managed by a control plane, so that if a node crashes, the control plane will automatically spin up a new instance of the container as a failsafe.
