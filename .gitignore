@@ -10,6 +10,7 @@ talosconfig
 
 .env
 *.env
+!.env.example
 .DS_Store
 controlplane.yaml
 worker.yaml
