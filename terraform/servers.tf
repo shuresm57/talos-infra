@@ -4,7 +4,7 @@ resource "hcloud_server" "nat" {
   image       = "debian-12"
   server_type = "cx22"
   location    = var.location
-  user_data   = file("../../talos/nat-vm-cloud-init.yaml")
+  user_data   = file("../talos/nat-vm-cloud-init.yaml")
 }
 
 resource "hcloud_server_network" "nat" {
@@ -20,10 +20,10 @@ resource "hcloud_server" "cp_servers" {
   image       = var.talos_image_id
   server_type = var.server_type
   location    = var.location
-  user_data   = file("../../talos/controlplane.yaml")
+  user_data   = file("../talos/controlplane.yaml")
 
   labels = {
-    type = "control_plane"
+    type = "cp"
   }
 
   public_net {
@@ -45,7 +45,7 @@ resource "hcloud_server" "worker_node" {
   image       = var.talos_image_id
   server_type = var.server_type
   location    = var.location
-  user_data   = file("../../talos/worker.yaml")
+  user_data   = file("../talos/worker.yaml")
 
   labels = {
     type = "worker_node"
@@ -58,6 +58,6 @@ resource "hcloud_server" "worker_node" {
 }
 
 resource "hcloud_server_network" "worker" {
-  server_id  = hcloud_server.worker.id
+  server_id  = hcloud_server.worker_node.id
   network_id = hcloud_network.main.id
 }

@@ -13,5 +13,5 @@ resource "hcloud_network_subnet" "main" {
 resource "hcloud_network_route" "nat" {
   network_id  = hcloud_network.main.id
   destination = "0.0.0.0/0"
-  gateway     = hcloud_server_network.nap.ip
+  gateway     = hcloud_server_network.nat.ip
 }

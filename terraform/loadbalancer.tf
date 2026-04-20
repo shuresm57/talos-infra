@@ -1,6 +1,6 @@
 resource "hcloud_load_balancer" "apid" {
   name               = var.project_name
-  load_balancer_type = "lbll"
+  load_balancer_type = "lb11"
   location           = var.location
 }
 
